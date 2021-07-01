@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.IAdminDao">
+    <!--根据账号密码查询-->
+    <select id="login" resultType="com.domain.Admin">
+        select *
+        from admin
+        where id = #{account}
+          and password = #{password}
+    </select>
+    <select id="getAllAdmin" resultType="com.domain.Admin">
+        select *
+        from admin
+    </select>
+</mapper>
